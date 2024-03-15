@@ -1,6 +1,7 @@
 //Externas
 import React from 'react'
 import {Container,Box} from '@mui/material'
+import { useDispatch,useSelector } from "react-redux";
 
 //Internas
 import LoadingScreen from './components/loading'
@@ -10,8 +11,22 @@ import Header from './components/header'
 
 export default function ContainerFunction({Loading=false,Status=200,children}){
 
+    const theme = useSelector((state) => state.mode.darkmode);
+
     return(
-        <Container>
+        <Box
+        height="100%"
+        width="100%"
+        style={{
+            backgroundColor:theme.mode === "light"
+            ? null
+            : "#000"
+        }}
+        marginBottom={0}
+        >
+            <Container
+            marginBottom={0}
+            >
             {
                 Loading
                 ? <LoadingScreen/>
@@ -22,7 +37,8 @@ export default function ContainerFunction({Loading=false,Status=200,children}){
                         <>
                         <Header/>
                         <Box
-                        my={9}
+                        marginTop={9}
+                        marginBottom={0}
                         >
                           {children}
                         </Box>
@@ -37,7 +53,7 @@ export default function ContainerFunction({Loading=false,Status=200,children}){
                         }
                     </>
             }
-        </Container>
+            </Container>
+        </Box>
     )
-
 }

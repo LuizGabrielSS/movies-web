@@ -5,9 +5,11 @@ const LightMode = {
     primary:{
         main:"#3333ff"
     },
-    secondary: {
-        main: '#131052',
-    },
+    text:{
+        main:"#000000",
+        secondary:"#262626"
+    }
+    
 }
 
 const DarkMode = {
@@ -15,9 +17,11 @@ const DarkMode = {
     primary:{
         main:"#1a1a1a"
     },
-    secondary: {
-        main: '#131052',
-    },
+    text:{
+        main:"#fff",
+        secondary:"#404040"
+    }
+    
 }
 
 export const ModeSlice = createSlice({
