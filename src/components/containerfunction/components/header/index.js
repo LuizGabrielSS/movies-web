@@ -139,6 +139,10 @@ export default function Header(){
             Nome="Home"
             Local='/'
             />
+            <ButtonsNavigation
+            Nome="Search"
+            Local='/movie/search'
+            />
             <SwitchMode
             Mode={theme.mode === "light"}
             Change={setDark}

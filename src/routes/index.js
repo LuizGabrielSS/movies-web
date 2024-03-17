@@ -6,6 +6,7 @@ import HomeScreen from '../pages/homepage'
 import NotFoundScreen from '../pages/notfound'
 import MovieScreen from '../pages/movie'
 import CollectionScreen from '../pages/collections'
+import SearchScreen from '../pages/search'
 
 export default function RotasFunction(){
 
@@ -36,6 +37,12 @@ export default function RotasFunction(){
                 path="/movie/collection/:id"
                 element={
                     <CollectionScreen/>
+                }
+                />
+            <Route
+                path="/movie/search"
+                element={
+                    <SearchScreen/>
                 }
                 />
             </Routes>

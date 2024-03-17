@@ -1,9 +1,11 @@
 import api from '../../../services/api'
 
-export default function RequisicaoInicial(SetLoading,SetStatus,SetMovieData,id){
+
+export default function RequisicaoMovies(SetMovieData,SetStatus,SearchInput){
 
     const params = {
-        "language":"pt-BR"
+        "language":"pt-BR",
+        "query":SearchInput
     }
 
     const headers = {
@@ -11,7 +13,7 @@ export default function RequisicaoInicial(SetLoading,SetStatus,SetMovieData,id){
         "Authorization":`Bearer ${process.env.REACT_APP_API_KEY}`
     }
 
-    api.get(`movie/${id}`,{
+    api.get(`search/movie`,{
         params:params,
         headers:headers
     })
@@ -21,7 +23,5 @@ export default function RequisicaoInicial(SetLoading,SetStatus,SetMovieData,id){
     )).catch((error) => {
         SetStatus(error.status)
     })
-
-    SetLoading(false)
 
 }

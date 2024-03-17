@@ -16,7 +16,6 @@ export default function RequisicaoInicial(SetLoading,SetStatus,SetMovieData,id){
         headers:headers
     })
     .then((res) => (
-        console.log(res.data),
         SetMovieData(res.data),
         SetStatus(res.status)
     )).catch((error) => {
