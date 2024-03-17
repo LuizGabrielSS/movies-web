@@ -18,11 +18,7 @@ export default function NotFoundScreen({}){
             alignItems="center"
             justifyContent="center"
             alignSelf="center"
-            sx={{
-                border: 5,
-                borderColor: Purple,
-                borderRadius:10,
-            }}
+            
             >
                 <Dialog
                 open={true}
