@@ -1,9 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useNavigate,useLocation } from 'react-router-dom'
 import { AppBar, Box, Button, Switch, Toolbar, Typography } from '@mui/material'
 import { useDispatch,useSelector } from "react-redux";
-import WbSunnyIcon from '@mui/icons-material/WbSunny';
-import ModeNightIcon from '@mui/icons-material/ModeNight';
 import styled from '@emotion/styled';
 
 import {ChangeMode} from '../../../../redux/reducers/mode'

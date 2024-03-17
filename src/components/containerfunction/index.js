@@ -1,7 +1,7 @@
 //Externas
 import React from 'react'
 import {Container,Box} from '@mui/material'
-import { useDispatch,useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
 //Internas
 import LoadingScreen from './components/loading'

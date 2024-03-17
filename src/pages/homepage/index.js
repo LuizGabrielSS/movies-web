@@ -36,6 +36,7 @@ export default function HomeScreen(){
                                     NomeOriginal={item.original_title}
                                     Poster={`https://image.tmdb.org/t/p/w500/${item.poster_path}`}
                                     Sinopse={item.overview}
+                                    ID={item.id}
                                     />
                                 </>
                             ))

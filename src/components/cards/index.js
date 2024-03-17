@@ -1,8 +1,10 @@
 import React from 'react'
-import { Avatar, Box, Button, Card, CardActions, CardContent, CardHeader, CardMedia, Typography } from '@mui/material'
+import { Avatar, Box, Card, CardActions, CardContent, CardHeader, CardMedia, Typography } from '@mui/material'
 import { format, parseISO } from 'date-fns';
 import { pt } from 'date-fns/locale';
-import { useSelector } from 'react-redux';
+import { useNavigate } from "react-router-dom";
+
+import ButtonFunction from '../buttonfunction';
 
 export default function CardFunction({Adulto,Poster,Nome,NomeOriginal,Sinopse,DataLancamento,IdiomaOriginal,ID}){
 
@@ -10,7 +12,7 @@ export default function CardFunction({Adulto,Poster,Nome,NomeOriginal,Sinopse,Da
     
     const dataFormatada = format(data, "EEEE, d 'de' MMMM 'de' yyyy", { locale: pt });
 
-    const theme = useSelector((state) => state.mode.darkmode);
+    const navegacao = useNavigate();
 
     return(
         <Box
@@ -63,16 +65,10 @@ export default function CardFunction({Adulto,Poster,Nome,NomeOriginal,Sinopse,Da
             disableSpacing
             >
                 <Box>
-                    <Button 
-                    color={
-                        theme.mode === "light"
-                        ? "primary"
-                        : "inherit"}
-                    variant={"outlined"}
-                    onClick={() => console.log(ID)}
-                    >
-                        Ver mais
-                    </Button>
+                    <ButtonFunction
+                    ButtonFunction={()=>navegacao(`/movie/${ID}`)}
+                    Titulo="Ver mais"
+                    />
                 </Box>
             </CardActions>
             </Card>

@@ -8,6 +8,9 @@ const LightMode = {
     text:{
         main:"#000000",
         secondary:"#262626"
+    },
+    button:{
+        main:"#3333ff"
     }
     
 }
@@ -20,6 +23,9 @@ const DarkMode = {
     text:{
         main:"#fff",
         secondary:"#404040"
+    },
+    button:{
+        main:"#fff"
     }
     
 }

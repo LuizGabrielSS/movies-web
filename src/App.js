@@ -1,9 +1,8 @@
 import { ThemeProvider } from "@emotion/react";
 import { createTheme } from "@mui/material";
-import { useDispatch,useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
 import RotasFunction from "./routes";
-import store from './redux'
 
 function App() {
 
