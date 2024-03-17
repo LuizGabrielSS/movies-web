@@ -2,9 +2,9 @@ import React from 'react'
 import { Box } from '@mui/material'
 
 import LottieFunction from '../../../lottiefunction'
-import LoadingView from './loading.json'
+import NotFoundView from './notfound.json'
 
-export default function LoadingScreen(){
+export default function EmptyFunction({}){
 
     return(
         <Box
@@ -15,7 +15,7 @@ export default function LoadingScreen(){
         alignSelf="center"
         >
             <LottieFunction
-            Caminho_Lottie={LoadingView}
+            Caminho_Lottie={NotFoundView}
             />
         </Box>
     )

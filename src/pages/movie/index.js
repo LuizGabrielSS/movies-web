@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
 import ContainerFunction from '../../components/containerfunction'
+import EmptyFunction from '../../components/empty'
+
 import CardTop from './components/cardtop'
 import SinopseFunction from './components/sinopse'
 import ProdutorasFunction from './components/produtoras'
@@ -62,7 +64,7 @@ export default function MovieScreen(){
                         Link={MovieData.homepage}
                         />
                     </>
-                : null
+                : <EmptyFunction/>
             }
             {/*
             talvez - coleçao

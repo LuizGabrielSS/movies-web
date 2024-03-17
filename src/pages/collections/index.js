@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
 import ContainerFunction from '../../components/containerfunction'
+import EmptyFunction from '../../components/empty'
 
 import RequisicaoInicial from './requests/init'
 
@@ -29,7 +30,7 @@ export default function CollectionScreen(){
                 ?   <>
                     
                     </>
-                : null
+                : <EmptyFunction/>
             }
         </ContainerFunction>
     )
